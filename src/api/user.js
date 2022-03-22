@@ -1,24 +1,33 @@
-import request from '@/utils/request'
+import request from "@/utils/request";
 
+/** *
+ *  登录接口封装
+ * **/
 export function login(data) {
+  // 返回一个promise对象
   return request({
-    url: '/vue-admin-template/user/login',
-    method: 'post',
-    data
-  })
+    url: "/sys/login",
+    method: "post",
+    data,
+  });
+}
+/** 
+ 获取用户资料的接口 
+**/
+export function getUserInfo() {
+  return request({
+    url: "sys/profile",
+    method: "post",
+  });
+}
+/***
+ * 根据用户ID获取用户的详情
+ */
+export function getUserDetailById(id) {
+  return request({
+    // 模板字符串加$解析
+    url: `/sys/user/${id}`,
+  });
 }
 
-export function getInfo(token) {
-  return request({
-    url: '/vue-admin-template/user/info',
-    method: 'get',
-    params: { token }
-  })
-}
-
-export function logout() {
-  return request({
-    url: '/vue-admin-template/user/logout',
-    method: 'post'
-  })
-}
+export function logout() {}
