@@ -36,8 +36,8 @@
 import COS from "cos-js-sdk-v5";
 // 实例化COS对象
 const cos = new COS({
-  SecretId: "AKIDQjoeFbhY9XgZDgtrZ1EBsKWS9amiPqEN", // 身份识别 ID
-  SecretKey: "wc3FBrIWVEhvtc5MOAgwxiDTTHq9C0Zt", // 身份秘钥
+  SecretId: "AKIDhEVVFiuoSpvlMgjV0ECtJSKvFJ6dtrgE", // 身份识别 ID
+  SecretKey: "MRGo54nGTP6WS8WeV5OQBeqmRpwlKdgS", // 身份秘钥
 });
 export default {
   data() {
