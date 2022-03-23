@@ -28,6 +28,22 @@
         <!-- 表格中显示序号  -->
         <el-table-column type="index" label="序号" sortable="" />
         <el-table-column prop="username" label="姓名" sortable="" />
+        <el-table-column width="120px" label="头像" align="center">
+          <!-- 插槽 父组件传递数据 -->
+          <template v-slot="{ row }">
+            <img
+              v-imagerror="require('@/assets/common/head.jpg')"
+              :src="row.staffPhoto"
+              alt=""
+              style="
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+                padding: 10px;
+              "
+            />
+          </template>
+        </el-table-column>
         <el-table-column prop="workNumber" label="工号" sortable="" />
         <el-table-column
           prop="formOfEmployment"
